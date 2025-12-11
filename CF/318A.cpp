@@ -13,6 +13,5 @@ int main() {
         k -= oddCount; 
         cout <<2*k<< endl;
     }
-
     return 0;
 }

@@ -27,7 +27,7 @@ int main(){
                 break;
             }    
         }   
-    }else{
+    } else{
         for(int i =0;i<n;i++){
             if(arr[i]%2 != 0){
                 cout<<i+1<<" ";

@@ -8,6 +8,7 @@ int main(){
     cin >> input;
 
     int i = 0;
+    
     while(i < input.size()){
         if(input[i] == 'H' || input[i] == b || input[i] == 'Q'){
             cout << "YES" << endl;

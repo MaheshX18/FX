@@ -6,14 +6,14 @@ int main() {
     cin >> n;
 
     vector<int> a(n);
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++){
         cin >> a[i];
     }
 
     // Find leftmost maximum
     int maxVal = *max_element(a.begin(), a.end());
     int posMax = 0;
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++){
         if (a[i] == maxVal) {
             posMax = i;
             break;

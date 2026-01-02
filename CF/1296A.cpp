@@ -6,6 +6,7 @@ int main(){
     int n;
     cin >> n;
     
+    
     while(n--){
         int a;
         cin >> a;
@@ -24,7 +25,7 @@ int main(){
             }
         }
 
-        
+
         if(odd == 0){
             cout<<"NO"<<endl;
         }else if(even == 0 && a % 2 == 0){

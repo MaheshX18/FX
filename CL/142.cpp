@@ -51,7 +51,6 @@ public:
                 return slow;   // start of cycle
             }
         }
-
         return NULL;
         
     }

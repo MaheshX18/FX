@@ -12,8 +12,9 @@ int main() {
 
         if(n >= k*k && (n % 2 == k % 2))
             cout << "YES\n";
-        else
+        else 
             cout << "NO\n";
+        
     }
     return 0;
 }

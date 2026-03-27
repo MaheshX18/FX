@@ -1,34 +1,25 @@
-#include <bits/stdc++.h>
-using namespace std;
+class Solution {
+public:
+    bool areSimilar(vector<vector<int>>& mat, int k) {
+        int m = mat.size();
+        int n = mat[0].size();
 
-int main() {
-    
-    int n;
-    cin >> n;
+        k %= n;  //(reduce k<n)
 
-    vector<int> prices(n);
-    for(int i = 0; i < n; i++){
-        cin >> prices[i];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i % 2 == 0) {
+                    // even row , left rotate
+                    if (mat[i][j] != mat[i][(j + k) % n])
+                        return false;
+                } else {
+                    // odd row , right rotate
+                    if (mat[i][j] != mat[i][(j - k + n) % n])
+                        return false;
+                }
+            }
+        }
+
+        return true;
     }
-
-    // Step 1: Sort the prices
-    sort(prices.begin(), prices.end());
-
-    int q;
-    cin >> q;
-
-    while(q--){
-        int m;
-        cin >> m;
-
-        // Step 2: Binary search
-        auto it = upper_bound(prices.begin(), prices.end(), m);
-
-        // Step 3: Count shops
-        int count = it - prices.begin();
-
-        cout << count << "\n";
-    }
-
-    return 0;
-}
+};
